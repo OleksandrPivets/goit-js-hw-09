@@ -76,8 +76,7 @@ const galleryItems = [
    refs.galleryContainer.insertAdjacentHTML('beforeend', galleryMarkup);
    
    function createGalleryMarkup(photos) {
-    return photos
-     .map(({ preview, original, description }) => {
+    return photos.map(({ preview, original, description }) => {
       return `<li class="gallery__item">
        <a
         class="gallery__link"
