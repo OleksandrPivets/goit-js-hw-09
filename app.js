@@ -65,7 +65,7 @@ const galleryItems = [
   ];
 
   const refs = {
-    galleryContainerRef: document.querySelector('.js-gallery'),
+    galleryContainer: document.querySelector('.js-gallery'),
     modalWindowRef: document.querySelector('.js-lightbox'),
     closeModalBtnRef: document.querySelector('[data-action="close-lightbox"]'),
     lightboxImageRef: document.querySelector('.lightbox__image'),
@@ -73,7 +73,7 @@ const galleryItems = [
    };
    
    const galleryMarkup = createGalleryMarkup(galleryItems);
-   refs.galleryContainerRef.insertAdjacentHTML('beforeend', galleryMarkup);
+   refs.galleryContainer.insertAdjacentHTML('beforeend', galleryMarkup);
    
    function createGalleryMarkup(photos) {
     return photos
@@ -95,7 +95,7 @@ const galleryItems = [
      .join('');
    }
    
-   refs.galleryContainerRef.addEventListener('click', onModalOpen);
+   refs.galleryContainer.addEventListener('click', onModalOpen);
    function onModalOpen(e) {
     e.preventDefault();
     if (!e.target.classList.contains('gallery__image')) {
